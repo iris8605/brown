@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SWF</title>
+    <style type="text/css">
+        body{width: 100%; height: 100%; margin:0; padding: 0; background: #eee}
+    </style>
+</head>
+<body>
+<!-- <object height="100%"  type="application/x-shockwave-flash"> 
+<param name="movie" value="http://192.168.10.211:9001/img/baby/l2b1m0.swf"> 
+<param name="quality" value="high">
+<param name="scale" value="NO_SCALE">
+<param name="fullscreen" value="true">
+
+
+</object> -->
+
+<!-- <param name="width" value="100%">  -->
+<!-- <embed src="http://192.168.10.211:9001/img/baby/l2b1m1.swf" quality="high" type="application/x-shockwave-flash"> 
+</embed>  -->
+
+<!-- <embed src="./l2b1m1.swf" quality=high bgcolor=#FFFFFF   NAME="brown"  id="brown" ALIGN="" type="application/x-shockwave-flash"   PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"> 
+ -->
+<div id="myFlash">
+    The &quot;You don't have flash&quot; message.
+    Or any other backup content.
+</div>
+<script src="jquery-1.4.2.min.js"></script>
+<script src="jquery.swfobject.1-1-1.min.js"></script>
+
+<script>
+$(document).ready(
+    // $('#brown').width($(window).width());
+    // $('#brown').height($(window).height());
+    function() {
+        $('#myFlash').flash({
+            swf:'./l2b1m0.swf',
+            width: $(window).width(),
+            height: $(window).height(),
+            // allowscale: true,
+            fullScreen: "yes",
+            allowFullScreen: "true",
+            wmode: 'transparent',
+            play: "false"
+        });
+    }
+);
+</script>
+</body>
