@@ -18,21 +18,22 @@
 <script src="./jquery.swfobject.1-1-1.min.js"></script>
 <script>
 $(document).ready(function(){
-
-        $('#brown').flash({
-            swf:'./main.swf',
-            width: $(window).width(),
-            height: $(window).height(),
-            // allowscale: true,
-            fullScreen: "yes",
-            allowFullScreen: "true",
-            // wmode: 'transparent',
-            play: "false"
-        });
-
+    $('#brown').flash({
+        swf:'./main.swf',
+        width: $(window).width(),
+        height: $(window).height(),
+        // allowscale: true,
+        fullScreen: "yes",
+        allowFullScreen: "true",
+        // wmode: 'transparent',
+        play: "false"
+    });
     $(window).resize(function () {
-        $('#brown object')[0].width = $(window).width();
-        $('#brown object')[0].height = $(window).height();
+        var obj = $('#brown object')[0];
+        if(undefined != obj){
+            obj.width = $(window).width();
+            obj.height = $(window).height();
+        }
     }).trigger("resize");
 });
 </script>
