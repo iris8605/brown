@@ -17,7 +17,7 @@
 <script src="./jquery-1.4.2.min.js"></script>
 <script src="./jquery.swfobject.1-1-1.min.js"></script>
 <script>
-$(document).ready(
+$(document).ready(function(){
 
         $('#brown').flash({
             swf:'./main.swf',
@@ -34,7 +34,7 @@ $(document).ready(
         $('#brown object')[0].width = $(window).width();
         $('#brown object')[0].height = $(window).height();
     }).trigger("resize");
-);
+});
 </script>
 </body>
 </html>
